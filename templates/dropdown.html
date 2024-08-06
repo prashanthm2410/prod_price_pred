@@ -1,0 +1,333 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Entry</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-ZenhVNpHmPQ0zY9iWYBXfSCMkTzGAttQKzP8vbOcwALTYTkz9TgZ9iJY2yCS8n+CQ" crossorigin="anonymous">
+  <style>
+html {
+  height:100%;
+}
+
+body {
+  margin:0;
+}
+.bg {
+  animation: slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #000b80 50%, #ffffff 50%);
+  bottom: 0;
+  left: -50%;
+  opacity: 0.5;
+  position: fixed;
+  right: -50%;
+  top: 0;
+  z-index: -1;
+}
+
+
+.bg2 {
+  animation-direction:alternate-reverse;
+  animation-duration:4s;
+}
+
+.bg3 {
+  animation-duration:5s;
+}
+@keyframes slide {
+  0% {
+    transform:translateX(-25%);
+  }
+  100% {
+    transform:translateX(25%);
+  }
+}
+    /* body {
+      background-color: #f5f5f5;
+    } */
+    
+    form {
+    border: 2px solid #ccc;  /* 2px wide solid border in light gray color */
+    padding: 20px;  /* Add some space between the border and form elements */
+    border-radius: 5px;  /* Rounded corners for the border */
+    margin: 0 auto;  /* Center the form horizontally */
+    margin-top: 20px;
+    width: 50%;  /* Adjust width as needed */
+  }
+  .custom-select {
+  position: relative;
+  display: inline-block;
+  width: 100%;  /* Adjust width as needed */
+  height: 30px;  /* Adjust height as needed */
+  padding: 5px 10px; /* Adjust padding as needed */
+  border: 1px solid #ccc;
+  border-radius: 4px; /* Add a slight border radius for a smoother look */
+  font-size: 16px;
+  background-color: #d8e1e2df;  /* Pista green background color using hex code */
+}
+.text-select {
+  position: relative;
+  display: inline-block;
+  width: 97.5%;  /* Adjust width as needed */
+  height: 30px;  /* Adjust height as needed */
+  padding: 5px 10px; /* Adjust padding as needed */
+  border: 1px solid #ccc;
+  border-radius: 4px; /* Add a slight border radius for a smoother look */
+  font-size: 16px;
+  background-color: #d8e1e2df;  /* Pista green background color using hex code */
+}
+
+.custom-select::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 15px;  /* Adjust width as needed for the "shade" effect */
+  background: linear-gradient(to right, #fff 0%, #ececec 100%);  /* Creates a subtle shade effect */
+  border-radius: 0 4px 4px 0;  /* Creates the curved corner on the right side */
+}
+
+.custom-select:hover::after {
+  background: linear-gradient(to right, #fff 0%, #ddd 100%);  /* Slight shade change on hover */
+}
+  </style>
+</head>
+<body>
+  <div class="bg"></div>
+  <div class="bg bg2"></div>
+  <div class="bg bg3"></div>
+  <div class="content">
+    <form action="/submit" method="post">
+      <center><b></b> <h1> PRODUCT ENTRY FORM</h1> </center>
+      <div class="entry mb-3">
+          <label class="form-label"><b>CHOOSE CATEGORY 1</b></label> <br>
+          <select class="custom-select" name="category1" aria-label="CATEGORY 1">
+              <option value="1" selected><p>ELECTRONICS</p></option>  
+              <option value="4">SPORTS,BOOKS AND MORE</option>
+              <option value="3">Men's Wear</option>
+              <option value="5">Women's Wear</option>
+              <option value="0">Baby and Kids</option>
+              <option value="2">Home and Furniture</option>
+          </select> <br> <br>
+  
+          <label class="form-label"><b>CHOOSE CATEGORY 2</b></label> <br>
+          <select class="custom-select" name="category2" aria-label="CATEGORY 2">
+            <option value="64">Sports</option>
+            <option value="21">Exercise Fitness</option>
+            <option value="24">Food Essentials</option>
+            <option value="33">Health & Nutrition</option>
+            <option value="7">Books</option>
+            <option value="66">Stationery</option>
+            <option value="1">Auto Accessories</option>
+            <option value="38">Industrial & Scientific tools</option>
+            <option value="51">Medical Supplies</option>
+            <option value="28">Gaming</option>
+            <option value="53">Mobile Accessories</option>
+            <option value="62">Smart Wearable Tech</option>
+            <option value="34">Health Care Appliances</option>
+            <option value="48">Laptops</option>
+            <option value="18">Desktop PCs</option>
+            <option value="29">Gaming and Accessories</option>
+            <option value="15">Computer Accessories</option>
+            <option value="16">Computer Peripherals</option>
+            <option value="69">Tablets</option>
+            <option value="63">Speakers</option>
+            <option value="13">Cameras</option>
+            <option value="12">Camera Accessories</option>
+            <option value="54">Network Components</option>
+            <option value="25">Foot Wear</option>
+            <option value="52">Men's Grooming</option>
+            <option value="72">Top Wear</option>
+            <option value="8">Bottom Wear</option>
+            <option value="67">Suits, Blazers and Waistcoats</option>
+            <option value="71">Ties, Socks, Caps and More</option>
+            <option value="22">Fabrics</option>
+            <option value="76">Winter Wear</option>
+            <option value="20">Ethnic Wear</option>
+            <option value="39">Innerwear and Loungewear</option>
+            <option value="59">Raincoats and Windcheaters</option>
+            <option value="74">Watches</option>
+            <option value="0">Accessories</option>
+            <option value="57">Personal Care Appliances</option>
+            <option value="75">Western and Maternity Wear</option>
+            <option value="49">Lingerie and Sleepwear</option>
+            <option value="68">Swim and Beachwear</option>
+            <option value="56">Party Dresses</option>
+            <option value="65">Sports Wear</option>
+            <option value="19">Ethnic Bottoms</option>
+            <option value="26">Foot Wear</option>
+            <option value="5">Beauty and Grooming</option>
+            <option value="40">Jewellery</option>
+            <option value="41">Kids Clothing</option>
+            <option value="9">Boys Clothing</option>
+            <option value="30">Girls Clothing</option>
+            <option value="2">Baby Boy Clothing</option>
+            <option value="4">Baby Girl Clothing</option>
+            <option value="42">Kids Footwear</option>
+            <option value="10">Boys Footwear</option>
+            <option value="31">Girls Footwear</option>
+            <option value="44">Kids Watches</option>
+            <option value="43">Kids Sunglasses</option>
+            <option value="45">Kids Winter Wear</option>
+            <option value="11">Boys Winter Wear</option>
+            <option value="32">Girls Winter Wear</option>
+            <option value="73">Toys</option>
+            <option value="60">School Supplies</option>
+            <option value="3">Baby Care</option>
+            <option value="46">Kitchen, Cookware and Serveware</option>
+            <option value="70">Tableware and Dinnerware</option>
+            <option value="47">Kitchen Storage</option>
+            <option value="14">Cleaning Supplies</option>
+            <option value="6">Bedroom Furniture</option>
+            <option value="50">Living Room Furniture</option>
+            <option value="55">Office and Study Furniture</option>
+            <option value="17">DIY Furniture</option>
+            <option value="27">Furnishing</option>
+            <option value="61">Smart Home Automation</option>
+            <option value="36">Home Improvement</option>
+            <option value="35">Home Décor</option>
+            <option value="37">Home Lighting</option>
+            <option value="23">Festive Decor and Gifts</option>
+            <option value="58">Pet Supplies</option>
+          </select> <br> <br>
+  
+          <label class="form-label"><b>CHOOSE CATEGORY 3</b></label> <br>
+          <select class="custom-select" name="category3" aria-label="CATEGORY 3">
+              <option value="68">Cricket</option>
+              <option value="20">Badminton</option>
+              <option value="71">Cycling</option>
+              <option value="109">Football</option>
+              <option value="234">Skating</option>
+              <option value="45">Camping and Hiking</option>
+              <option value="264">Swimming</option>
+              <option value="49">Cardio Equipment</option>
+              <option value="136">Home Gyms</option>
+              <option value="259">Support</option>
+              <option value="90">Dumbbells</option>
+              <option value="0">Ab Exercisers</option>
+              <option value="223">Shakers and Sippers</option>
+              <option value="297">Yoga Mat</option>
+              <option value="126">Gym Gloves</option>
+              <option value="187">Nuts and Dry Fruits</option>
+              <option value="299">Snacks and Beverages</option>
+              <option value="58">Chocolates</option>
+              <option value="121">Gifting Combos</option>
+              <option value="262">Sweets Store</option>
+              <option value="204">Protein Supplements</option>
+              <option value="285">Vitamin Supplements</option>
+              <option value="132">Health Drinks</option>
+              <option value="5">Ayurvedic Supplements</option>
+              <option value="1">Academics</option>
+              <option value="167">Literature and Fiction</option>
+              <option value="185">Non Fiction</option>
+              <option value="298">Young Readers</option>
+              <option value="221">Self -Help</option>
+              <option value="197">Pens</option>
+              <option value="81">Diaries</option>
+              <option value="48">Card Holders</option>
+              <option value="76">Desk Organizers</option>
+              <option value="43">Calculators</option>
+              <option value="146">Key Chains</option>
+              <option value="135">Helmets and Riding Gears</option>
+              <option value="46">Car Audio/Video</option>
+              <option value="47">Car Mobile Accessories</option>
+              <option value="283">Vehicle Lubricants</option>
+              <option value="139">Industrial Measurement Devices</option>
+              <option value="140">Industrial Testing Devices</option>
+              <option value="159">Lab and Scientific Products</option>
+              <option value="189">Packaging and Shipping Products</option>
+              <option value="212">Safety Products</option>
+              <option value="201">Pregnancy and Fertility Kits</option>
+              <option value="138">Hot Water Bag</option>
+              <option value="117">Gaming Consoles</option>
+              <option value="116">Gaming Accessories</option>
+              <option value="241">Smart Glasses (VR)</option>
+              <option value="177">Mobile Cases</option>
+              <option value="131">Headphones & Headsets</option>
+              <option value="199">Power Banks</option>
+              <option value="220">Screenguards</option>
+              <option value="175">Memory Cards</option>
+              <option value="243">Smart Headphones</option>
+              <option value="176">Mobile Cables</option>
+              <option value="178">Mobile Chargers</option>
+              <option value="179">Mobile Holders</option>
+              <option value="245">Smart Watches</option>
+              <option value="242">Smart Glasses (VR)</option>
+              <option value="239">Smart Bands</option>
+              <option value="39">Bp Monitors</option>
+              <option value="294">Weighing Scale</option>
+              <option value="118">Gaming Laptops</option>
+              <option value="77">Desktop PCs</option>
+              <option value="119">Gaming and Accessories</option>
+              <option value="99">External Hard Disks</option>
+              <option value="196">Pendrives</option>
+              <option value="161">Laptop Skins and Decals</option>
+              <option value="160">Laptop Bags</option>
+              <option value="181">Mouse</option>
+              <option value="203">Printers and Ink Cartridges</option>
+              <option value="180">Monitors</option>
+              <option value="3">Apple Ipads</option>
+              <option value="251">Soundbars</option>
+              <option value="33">Bluetooth Speakers</option>
+              <option value="73">DTH Set Top Box</option>
+              <option value="72">DSLR and Mirrorless</option>
+              <option value="255">Sports and Action</option>
+              <option value="165">Lens</option>
+              <option value="281">Tripods</option>
+              <option value="209">Routers</option>
+              <option value="253">Sports Shoes</option>
+              <option value="54">Casual Shoes</option>
+              <option value="111">Formal Shoes</option>
+              <option value="215">Sandals and Floaters</option>
+              <option value="107">Flip -Flops</option>
+              <option value="168">Loafers</option>
+              <option value="35">Boots</option>
+              <option value="210">Running Shoes</option>
+              <option value="246">Sneakers</option>
+              <option value="74">Deodorants</option>
+              <option value="198">Perfumes</option>
+              <option value="27">Beard Care and Grooming</option>
+              <option value="227">Shaving and Aftershave</option>
+              <option value="222">Sexual Wellness</option>
+              <option value="265">T -Shirts</option>
+              <option value="110">Formal Shirts</option>
+              <option value="53">Casual Shirts</option>
+              <option value="143">Jeans</option>
+              <option value="55">Casual Trousers</option>
+              <option value="112">Formal Trousers</option>
+              <option value="278">Track pants</option>
+              <option value="231">Shorts</option>
+              <option value="50">Cargos</option>
+              <option value="271">Three Fourths</option>
+              <option value="257">Suits, Blazzers and waistcoats</option>
+              <option value="272">Ties, socks, caps and more</option>
+              <option value="100">Fabrics</option>
+              <option value="261">Sweatshirts</option>
+              <option value="142">Jackets</option>
+              <option value="260">Sweater</option>
+              <option value="279">Tracksuits</option>
+              <option value="156">Kurta</option>
+              <option value="96">Ethnic Sets</option>
+              <option value="228">Sherwanis</option>
+              <option value="95">Ethnic Pyjama</option>
+              <option value="78">Dhoti</option>
+              <option value="172">Lungi</option>
+              <option value="41">Brief
+          </select> <br> <br>
+  
+          <label><b><p style="font-size: 30px; margin-bottom: -20px; margin-top: -6px;">Product Title</p></b></label><br>
+          <input type="text" name="productTitle" class="text-select" /><br><br>
+  
+          <label><b>MRP (Maximum Retail Price)</b></label><br>
+          <input type="number" name="mrp" class="text-select" placeholder="Enter MRP" required><br><br>
+          <label><b>Selling Price</b></label><br>
+          <input type="number" name="mrp" class="text-select" placeholder="Enter Selling Price" required><br><br>
+          <button style="width: 100%; height: 30px; background-color: indigo; border: 2pt solid ; border-radius: 4px;">SUBMIT</button>          
+      </div>
+  </form>
+  
+</div>
+</body>
+</html>

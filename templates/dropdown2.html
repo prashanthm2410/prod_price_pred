@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Entry</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-ZenhVNpHmPQ0zY9iWYBXfSCMkTzGAttQKzP8vbOcwALTYTkz9TgZ9iJY2yCS8n+CQ" crossorigin="anonymous">
+  <style>
+html {
+  height:100%;
+}
+
+body {
+  margin:0;
+}
+
+.bg {
+  animation:slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
+  bottom:0;
+  left:-50%;
+  opacity:.5;
+  position:fixed;
+  right:-50%;
+  top:0;
+  z-index:-1;
+}
+
+.bg2 {
+  animation-direction:alternate-reverse;
+  animation-duration:4s;
+}
+
+.bg3 {
+  animation-duration:5s;
+}
+@keyframes slide {
+  0% {
+    transform:translateX(-25%);
+  }
+  100% {
+    transform:translateX(25%);
+  }
+}
+    /* body {
+      background-color: #f5f5f5;
+    } */
+    
+    form {
+    border: 2px solid #ccc;  /* 2px wide solid border in light gray color */
+    padding: 20px;  /* Add some space between the border and form elements */
+    border-radius: 5px;  /* Rounded corners for the border */
+    margin: 0 auto;  /* Center the form horizontally */
+    margin-top: 20px;
+    width: 50%;  /* Adjust width as needed */
+  }
+  .custom-select {
+  position: relative;
+  display: inline-block;
+  width: 100%;  /* Adjust width as needed */
+  height: 30px;  /* Adjust height as needed */
+  padding: 5px 10px; /* Adjust padding as needed */
+  border: 1px solid #ccc;
+  border-radius: 4px; /* Add a slight border radius for a smoother look */
+  font-size: 16px;
+  background-color: #d8e1e2df;  /* Pista green background color using hex code */
+}
+.text-select {
+  position: relative;
+  display: inline-block;
+  width: 97.5%;  /* Adjust width as needed */
+  height: 30px;  /* Adjust height as needed */
+  padding: 5px 10px; /* Adjust padding as needed */
+  border: 1px solid #ccc;
+  border-radius: 4px; /* Add a slight border radius for a smoother look */
+  font-size: 16px;
+  background-color: #d8e1e2df;  /* Pista green background color using hex code */
+}
+
+.custom-select::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 15px;  /* Adjust width as needed for the "shade" effect */
+  background: linear-gradient(to right, #fff 0%, #ececec 100%);  /* Creates a subtle shade effect */
+  border-radius: 0 4px 4px 0;  /* Creates the curved corner on the right side */
+}
+
+.custom-select:hover::after {
+  background: linear-gradient(to right, #fff 0%, #ddd 100%);  /* Slight shade change on hover */
+}
+  </style>
+</head>
+<body>
+  <div class="bg"></div>
+  <div class="bg bg2"></div>
+  <div class="bg bg3"></div>
+  <div class="content">
+    <form action="/submit" method="post">
+      <center> <h1> product Entry form</h1> </center>
+      <div class="entry mb-3">
+          <label class="form-label"><b>CHOOSE CATEGORY 1</b></label> <br>
+          <select class="custom-select" name="category1" aria-label="CATEGORY 1">
+              <option value="1" selected><p>ELECTRONICS</p></option>  
+              <option value="#">SPORTS,BOOKS AND MORE</option>
+          </select> <br> <br>
+  
+          <label class="form-label"><b>CHOOSE CATEGORY 2</b></label> <br>
+          <select class="custom-select" name="category2" aria-label="CATEGORY 2">
+              <option value="#" selected><p>CHOOSE CATEGORY</p></option>  
+              <option value="62">Smart Wearable Tech</option>
+              <option value="#">Health Care Appliances</option>
+          </select> <br> <br>
+  
+          <label class="form-label"><b>CHOOSE CATEGORY 3</b></label> <br>
+          <select class="custom-select" name="category3" aria-label="CATEGORY 3">
+              <option value="242">Smart Glasses (VR)</option>
+              <option value="Mobile Cases">Mobile Cases</option>
+          </select> <br> <br>
+  
+          <label><b><p style="font-size: 30px; margin-bottom: -20px; margin-top: -6px;">Product Title</p></b></label><br>
+          <input type="text" name="productTitle" class="text-select" /><br><br>
+  
+          <label><b>MRP (Maximum Retail Price)</b></label><br>
+          <input type="number" name="mrp" class="text-select" placeholder="Enter MRP" required><br><br>
+  
+          <button style="width: 100%; height: 30px; background-color: aquamarine; border: 2pt solid ; border-radius: 4px;">SUBMIT</button>          
+      </div>
+  </form>
+  
+</div>
+</body>
+</html>

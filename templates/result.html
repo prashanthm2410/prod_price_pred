@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Price Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+         * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+        :root {
+            --primary-color: indigo;
+            --secondary-color: rgb(236, 223, 246);
+            --text-color: #333;
+            --background-color: #f5f5f5;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+
+        header, footer {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        section {
+            margin-bottom: 40px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        p {
+            margin-bottom: 15px;
+            font-size: 18px; /* Adjust font size */
+            font-weight: bold; /* Make text bold */
+            color: var(--text-color); /* Maintain text color */
+        }
+
+        button {
+            background-color: var(--secondary-color);
+            color: #fff;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: indigo;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Product Price Prediction</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Predicted Price</h2>
+            <!-- Display the predicted price here -->
+            <p>Predicted price for the product is: <span class="output">{{ predicted_price }}</span></p>
+            <!-- Display other details passed from Flask route -->
+            <p>Product Title: <span class="output">{{ product_title }}</span></p>
+            <p>Chosen Category: <span class="output">{{ chosen_category }}</span></p>
+            <!-- Add a button for navigation -->
+            <button onclick="window.history.back()">Back</button>
+        </section>
+    </main>
+    
+</body>
+</html>
+            
